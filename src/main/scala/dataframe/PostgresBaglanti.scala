@@ -15,10 +15,10 @@ object PostgresBaglanti {
 
     val df=spark.read.format("jdbc")
       .option("driver","org.postgresql.Driver")
-      .option("url","jdbc:postgresql://localhost:5432/tmk")
-      .option("dbtable","t_sega")
+      .option("url","jdbc:postgresql://localhost:5432/postgres")
+      .option("dbtable","table")
       .option("user","postgres")
-      .option("password","Aa123456")
+      .option("password","********")
       .load()
   df.show()
   }
